@@ -1,0 +1,10 @@
+include ':app', ":TestApp", ":common"
+//project(':TestApp').projectDir = new File("..\\TestApp") //对应Module的路径
+//include 'TestApp'
+
+project(':common').projectDir = new File("../common") //对应Module的路径
+include ':common:app'
+
+//include ':TestApp'
+project(':TestApp').projectDir = new File('../TestApp/')
+include ':TestApp:app'
